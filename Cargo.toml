@@ -1,0 +1,26 @@
+[package]
+name = "network-manager"
+version = "1.0.0"
+edition = "2021"
+description = "Gestionnaire réseau Windows — Proxy & Partages"
+
+[[bin]]
+name = "network-manager"
+path = "src/main.rs"
+
+[dependencies]
+eframe      = { version = "0.28", default-features = true }
+egui        = "0.28"
+winreg      = "0.52"
+if-addrs    = "0.13"
+
+[profile.release]
+opt-level = 3
+strip     = true
+lto       = true
+codegen-units = 1
+
+# Embed application icon & set Windows subsystem in release
+[package.metadata.winres]
+FileDescription = "Network Manager"
+ProductName     = "Network Manager"
