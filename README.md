@@ -1,5 +1,8 @@
 # 🌐 Network Manager — Gestionnaire Proxy & Partages Réseau Windows
 
+> **Prévention: Cet outil a été généré par Claude Code Sonnet 4.6**
+
+
 Interface graphique native Windows pour :
 - **Activer / désactiver le proxy** système (registre Windows) via un interrupteur cliquable
 - **Monter / démonter des lecteurs réseau** (UNC paths, ex : `\\serveur\users`)
