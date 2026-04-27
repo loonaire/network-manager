@@ -52,12 +52,12 @@ target\release\network-manager.exe
 ### Partages réseau
 | Colonne      | Description                              |
 |--------------|------------------------------------------|
-| Lettre       | Lettre du lecteur (ex : `U:`, `V:`)      |
-| Chemin réseau| Partage UNC (ex : `\\serveur\users`)     |
+| Lettre       | Lettre du lecteur (ex : `Z:`, `Y:`)      |
+| Chemin réseau| Partage UNC (ex : `\\serveur\partage`)     |
 | Utilisateur  | Optionnel — pour l'authentification      |
 | Mot de passe | Optionnel — masqué dans l'interface      |
 
-- **🔗 Connecter** : exécute `net use U: \\serveur\users /persistent:yes`
+- **🔗 Connecter** : exécute `net use U: \\serveur\partage /persistent:yes`
 - **⏏ Déconnecter** : exécute `net use U: /delete`
 - **🗑 Supprimer** : retire la ligne du tableau
 - **➕ Ajouter** : crée une nouvelle ligne
@@ -93,8 +93,8 @@ Modifiez les lecteurs pré-remplis dans `App::new()` (src/main.rs) :
 
 ```rust
 drives: vec![
-    Drive::new("U:", r"\\serveur\users"),
-    Drive::new("V:", r"\\serveur\datas"),
+    Drive::new("Z:", r"\\serveur\partage1"),
+    Drive::new("Y:", r"\\serveur\partage2"),
     Drive::new("W:", r"\\nas\backup"),   // ← ajoutez autant que nécessaire
 ],
 ```
