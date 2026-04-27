@@ -5,7 +5,7 @@
 
 Interface graphique native Windows pour :
 - **Activer / désactiver le proxy** système (registre Windows) via un interrupteur cliquable
-- **Monter / démonter des lecteurs réseau** (UNC paths, ex : `\\serveur\users`)
+- **Monter / démonter des lecteurs réseau** (UNC paths, ex : `\\serveur\partage`)
 - **Afficher les adresses IP** de toutes les interfaces réseau locales
 
 ---
