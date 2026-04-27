@@ -7,6 +7,7 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 use eframe::egui::{self, Color32, Margin, RichText, Rounding, Vec2};
+use std::env;
 use std::path::Path;
 use std::process::Command;
 use winreg::enums::{HKEY_CURRENT_USER, KEY_WRITE};
@@ -354,6 +355,18 @@ impl eframe::App for App {
             });
             ui.separator();
             ui.add_space(8.0);
+
+            // == Bloc Nom d'utilisateur =======================================
+            frame_card(ui, dark, |ui| {
+                ui.horizontal(|ui| {
+                    ui.label(RichText::new("Nom d'utilisateur: ").strong().weak());
+                    ui.label(RichText::new(env::var("USERNAME").unwrap_or("Inconnu".to_string())).strong().weak());
+                    ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {   
+                        ui.add_space(1.0);                
+                    });
+                });
+
+            });
 
             // == Bloc Adresses IP =============================================
             frame_card(ui, dark, |ui| {
