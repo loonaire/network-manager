@@ -1,5 +1,5 @@
 // ============================================================================
-//  Network Manager  —  Gestionnaire Proxy & Partages Réseau  (Windows)
+//  itquicktools  —  Gestionnaire Proxy & Partages Réseau  (Windows)
 //  Compilation : cargo build --release
 //  Prérequis   : Windows, droits Admin recommandés pour le proxy
 // ============================================================================
@@ -355,7 +355,7 @@ impl eframe::App for App {
             ui.horizontal(|ui| {
                 ui.heading(RichText::new(format!("🌐  {}", APPLICATION_NAME)).size(24.0).strong());
                 ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
-                    ui.label(RichText::new(format!("Windows Network Tool  v{}", VERSION)).strong().weak().italics());
+                    ui.label(RichText::new(format!("v{}", VERSION)).strong().weak().italics());
                 });
             });
             ui.separator();
@@ -688,14 +688,14 @@ fn legend_dot(ui: &mut egui::Ui, color: Color32, label: &str) {
 fn main() -> Result<(), eframe::Error> {
     let opts = eframe::NativeOptions {
         viewport: egui::ViewportBuilder::default()
-            .with_title("Network Manager")
+            .with_title(APPLICATION_NAME)
             .with_inner_size([760.0, 560.0])
             .with_min_inner_size([640.0, 440.0]),
         ..Default::default()
     };
 
     eframe::run_native(
-        "Network Manager",
+        APPLICATION_NAME,
         opts,
         Box::new(|cc| {
             let mut visuals          = egui::Visuals::dark();

@@ -1,5 +1,5 @@
 [package]
-name = "network-manager"
+name = "ITQuickTools"
 version = "1.0.0"
 edition = "2021"
 authors = ["loonaire"]
@@ -7,7 +7,7 @@ license = "MIT"
 description = "Gestionnaire réseau Windows — Proxy & Partages"
 
 [[bin]]
-name = "network-manager"
+name = "ITQuickTools"
 path = "src/main.rs"
 
 [dependencies]
@@ -24,5 +24,5 @@ codegen-units = 1
 
 # Embed application icon & set Windows subsystem in release
 [package.metadata.winres]
-FileDescription = "Network Manager"
-ProductName     = "Network Manager"
+FileDescription = "ITQuickTools"
+ProductName     = "ITQuickTools"

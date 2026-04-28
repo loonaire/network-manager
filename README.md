@@ -1,7 +1,6 @@
-# 🌐 Network Manager — Gestionnaire Proxy & Partages Réseau Windows
+# 🌐 ITQuickTools — Gestionnaire Proxy & Partages Réseau Windows
 
-> **Prévention: Cet outil a été généré par Claude Code Sonnet 4.6**
-
+> **Prévention: La base de cet outil a été généré par Claude Code Sonnet 4.6 puis modifier pour apprendre rust**
 
 Interface graphique native Windows pour :
 - **Activer / désactiver le proxy** système (registre Windows) via un interrupteur cliquable
@@ -33,7 +32,7 @@ cargo run
 cargo build --release
 
 :: L'exécutable se trouve dans :
-target\release\network-manager.exe
+target\release\ITQuickTools.exe
 ```
 
 ---
@@ -78,7 +77,7 @@ if-addrs = "0.13"   # énumération des interfaces réseau
 ## 🗂 Structure du projet
 
 ```
-network-manager/
+ITQuickTools/
 ├-- Cargo.toml
 ├-- README.md
 └-- src/
