@@ -388,7 +388,7 @@ impl eframe::App for App {
                     }
                     for (name, ip) in &self.ips {
                         frame_pill(ui, dark, |ui| {
-                            ui.vertical_centered(|ui| {
+                            ui.vertical(|ui| {
                                 ui.label(RichText::new(name).strong().weak());
                                 ui.label(RichText::new(ip).monospace().size(14.0).color(BLUE));
                             });
