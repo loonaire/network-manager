@@ -57,8 +57,8 @@ target\release\network-manager.exe
 | Utilisateur  | Optionnel — pour l'authentification      |
 | Mot de passe | Optionnel — masqué dans l'interface      |
 
-- **🔗 Connecter** : exécute `net use U: \\serveur\partage /persistent:yes`
-- **⏏ Déconnecter** : exécute `net use U: /delete`
+- **🔗 Connecter** : exécute `net use Z: \\serveur\partage /persistent:yes`
+- **⏏ Déconnecter** : exécute `net use Z: /delete`
 - **🗑 Supprimer** : retire la ligne du tableau
 - **➕ Ajouter** : crée une nouvelle ligne
 
