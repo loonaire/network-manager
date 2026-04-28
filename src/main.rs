@@ -350,7 +350,7 @@ impl eframe::App for App {
             ui.horizontal(|ui| {
                 ui.heading(RichText::new("🌐  Network Manager").size(24.0).strong());
                 ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
-                    ui.label(RichText::new("Windows Network Tool  v1.1").strong().weak().italics());
+                    ui.label(RichText::new(format!("Windows Network Tool  v{}", env!("CARGO_PKG_VERSION"))).strong().weak().italics());
                 });
             });
             ui.separator();
