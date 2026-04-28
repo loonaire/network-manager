@@ -13,6 +13,11 @@ use std::process::Command;
 use winreg::enums::{HKEY_CURRENT_USER, KEY_WRITE};
 use winreg::RegKey;
 
+// --- Constants ---------------------------------------------------------------
+
+const VERSION: &str = env!("CARGO_PKG_VERSION");
+const APPLICATION_NAME: &str = env!("CARGO_PKG_NAME");
+
 // --- Palette -----------------------------------------------------------------
 
 const GREEN:    Color32 = Color32::from_rgb(52,  199,  89);
@@ -348,9 +353,9 @@ impl eframe::App for App {
             // == En-tête ======================================================
             ui.add_space(10.0);
             ui.horizontal(|ui| {
-                ui.heading(RichText::new("🌐  Network Manager").size(24.0).strong());
+                ui.heading(RichText::new(format!("🌐  {}", APPLICATION_NAME)).size(24.0).strong());
                 ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
-                    ui.label(RichText::new(format!("Windows Network Tool  v{}", env!("CARGO_PKG_VERSION"))).strong().weak().italics());
+                    ui.label(RichText::new(format!("Windows Network Tool  v{}", VERSION)).strong().weak().italics());
                 });
             });
             ui.separator();
