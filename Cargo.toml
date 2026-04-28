@@ -5,6 +5,7 @@ edition = "2021"
 authors = ["loonaire"]
 license = "MIT"
 description = "Gestionnaire réseau Windows — Proxy & Partages"
+repository = "https://github.com/loonaire/itquicktools"
 
 [[bin]]
 name = "ITQuickTools"
