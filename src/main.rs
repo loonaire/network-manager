@@ -429,9 +429,9 @@ impl eframe::App for App {
                         ui.label(RichText::new("Proxy système").strong().size(14.0));
                         ui.add_space(2.0);
                         let (txt, col) = if self.proxy_on {
-                            ("● ACTIVÉ  — Le trafic passe par le proxy", RED)
+                            ("ACTIVÉ  — Le trafic passe par le proxy", RED)
                         } else {
-                            ("● DÉSACTIVÉ  — Connexion directe", GREEN)
+                            ("DÉSACTIVÉ  — Connexion directe", GREEN)
                         };
                         ui.label(RichText::new(txt).color(col).size(12.0));
                     });
